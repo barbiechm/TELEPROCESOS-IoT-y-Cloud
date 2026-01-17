@@ -17,7 +17,7 @@
             max-width: 800px;
             margin: auto;
             background: #fff;
-            padding: 20px 40px; /* Padding estándar */
+            padding: 20px 40px;
             border: 1px solid #ddd;
             box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
@@ -89,7 +89,7 @@
             color: #000;
         }
 
-        /* --- TABLAS (Estilo Sobrio) --- */
+        /* --- TABLAS --- */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -140,7 +140,7 @@
         <div class="header">
             <h1>Informe Académico</h1>
             <p><strong>Tema:</strong> Aplicaciones Modernas de Teleprocesos: IoT y Nube</p>
-            <p><strong>Nombre:</strong> Barbara Chacin]</p>
+            <p><strong>Nombre:</strong> Barbara Chacin</p>
             <p><strong>Cédula:</strong> 31692183</p>
             <p><strong>Asignatura:</strong> Teleprocesos</p>
             <p><strong>Fecha:</strong> Enero 2026</p>
@@ -158,43 +158,45 @@
                 </li>
                 <li><a href="#arquitectura">3. Arquitectura de Comunicación en Teleprocesos Modernos</a>
                     <ul>
-                        <li><a href="#sensores">3.1. Capa de Percepción (Sensores y Actuadores)</a></li>
+                        <li><a href="#sensores">3.1. Capa de Percepción y Gateways</a></li>
                         <li><a href="#transmision">3.2. Capa de Red y Transmisión</a></li>
                     </ul>
                 </li>
                 <li><a href="#protocolos">4. Protocolos Específicos de Teleproceso IoT</a>
                     <ul>
-                        <li><a href="#mqtt">4.1. MQTT (Message Queuing Telemetry Transport)</a></li>
-                        <li><a href="#comparativa">4.2. Comparativa: HTTP vs. MQTT</a></li>
+                        <li><a href="#mqtt">4.1. MQTT y Calidad de Servicio (QoS)</a></li>
+                        <li><a href="#comparativa">4.2. Comparativa Técnica: HTTP vs. MQTT</a></li>
                     </ul>
                 </li>
-                <li><a href="#edge">5. Edge Computing: Reduciendo la Latencia</a></li>
-                <li><a href="#desafios">6. Desafíos de Seguridad y Escalabilidad</a></li>
-                <li><a href="#conclusion">7. Conclusión</a></li>
-                <li><a href="#fuentes">8. Fuentes y Bibliografía</a></li>
+                <li><a href="#edge">5. Edge y Fog Computing: Descentralización del Proceso</a></li>
+                <li><a href="#casos">6. Casos de Uso Reales en la Industria</a></li>
+                <li><a href="#desafios">7. Desafíos de Seguridad y Escalabilidad</a></li>
+                <li><a href="#conclusion">8. Conclusión</a></li>
+                <li><a href="#fuentes">9. Fuentes y Bibliografía</a></li>
             </ul>
         </div>
+
         <h2 id="intro">1. Introducción: La Evolución del Teleproceso</h2>
         <p>
-            El teleproceso, tradicionalmente definido como el procesamiento de datos a distancia mediante la interconexión de terminales y unidades centrales a través de redes de telecomunicaciones, ha sufrido una transformación radical en la última década. El modelo clásico, caracterizado por la interacción humano-máquina (un operador ingresando datos en una terminal), ha evolucionado hacia un modelo de interacción máquina-máquina (M2M).
+            El teleproceso, tradicionalmente definido como el procesamiento de datos a distancia mediante la interconexión de terminales y unidades centrales a través de redes de telecomunicaciones, ha sufrido una transformación radical en la última década. El modelo clásico, caracterizado por la interacción humano-máquina (un operador ingresando datos manualmente en una terminal), ha evolucionado hacia un modelo de interacción máquina-máquina (M2M).
         </p>
         <p>
-            Esta evolución ha sido impulsada por dos tecnologías disruptivas: el <strong>Internet de las Cosas (IoT)</strong> y la <strong>Computación en la Nube (Cloud Computing)</strong>. Juntas, estas tecnologías han redefinido la arquitectura del teleproceso, permitiendo la recolección masiva de datos en tiempo real y su procesamiento descentralizado y elástico.
+            Esta evolución ha sido impulsada por la sinergia de dos tecnologías disruptivas: el <strong>Internet de las Cosas (IoT)</strong> y la <strong>Computación en la Nube (Cloud Computing)</strong>. Juntas, estas tecnologías han redefinido la arquitectura del teleproceso, permitiendo pasar de sistemas reactivos a sistemas proactivos basados en la recolección masiva de datos en tiempo real y su procesamiento descentralizado, elástico y, a menudo, automatizado mediante Inteligencia Artificial.
         </p>
 
         <h2 id="convergenia">2. Convergencia Tecnológica: IoT y Cloud Computing</h2>
         <p>
-            La relación entre IoT y Cloud Computing es simbiótica dentro del marco del teleproceso moderno. Mientras el IoT se encarga de la generación y captura de datos distribuidos, la Nube proporciona la infraestructura necesaria para el almacenamiento, procesamiento y análisis de dichos datos.
+            La relación entre IoT y Cloud Computing es simbiótica dentro del marco del teleproceso moderno. Mientras el IoT se encarga de la generación y captura de datos distribuidos en el mundo físico, la Nube proporciona la infraestructura virtualmente ilimitada necesaria para el almacenamiento, procesamiento y análisis de dichos datos.
         </p>
 
         <h3 id="iot-definicion">2.1. El Internet de las Cosas (IoT) como Terminal</h3>
         <p>
-            En la teoría clásica de teleprocesos, la "terminal" era un dispositivo de entrada/salida (DTE) operado por un humano. En el paradigma moderno, los dispositivos IoT asumen este rol. Un dispositivo IoT es cualquier objeto físico equipado con sensores, software y capacidad de conectividad que le permite recolectar e intercambiar datos. A diferencia de las terminales pasivas, los dispositivos IoT son activos y generan flujos continuos de telemetría sin intervención humana.
+            En la teoría clásica de teleprocesos, la "terminal" era un dispositivo de entrada/salida (DTE) pasivo. En el paradigma moderno, los dispositivos IoT asumen este rol pero con inteligencia embebida. Un dispositivo IoT es cualquier objeto físico equipado con sensores, software y capacidad de conectividad. A diferencia de las terminales pasivas, los dispositivos IoT son activos, autónomos y generan flujos continuos de telemetría (Big Data) sin intervención humana directa.
         </p>
 
         <h3 id="cloud-definicion">2.2. Cloud Computing como Unidad Central</h3>
         <p>
-            El antiguo "Mainframe" o servidor central ha sido reemplazado por la Nube. La Nube ofrece recursos computacionales (servidores, bases de datos, redes) como servicios a través de Internet. Esto permite que el sistema de teleproceso escale dinámicamente: si millones de sensores envían datos simultáneamente, la infraestructura en la nube se expande automáticamente para manejar la carga, algo imposible con los servidores físicos tradicionales.
+            El antiguo "Mainframe" o servidor central físico ha sido reemplazado por la Nube. La Nube ofrece recursos computacionales (IaaS, PaaS, SaaS) como servicios a través de Internet. Esto permite que el sistema de teleproceso escale dinámicamente: si millones de sensores envían datos simultáneamente, la infraestructura en la nube se expande automáticamente (auto-scaling) para manejar la carga y luego se contrae, optimizando costos y eficiencia operativa.
         </p>
         
 
@@ -203,35 +205,40 @@
 
         <h2 id="arquitectura">3. Arquitectura de Comunicación en Teleprocesos Modernos</h2>
         <p>
-            La arquitectura de un sistema de teleproceso moderno basado en IoT y Nube se estructura generalmente en capas, asegurando el flujo eficiente de la información desde el borde hasta el centro de datos.
+            La arquitectura de un sistema de teleproceso moderno basado en IoT y Nube se estructura generalmente en capas jerárquicas, asegurando el flujo eficiente de la información desde el "borde" hasta el centro de datos.
         </p>
 
-        <h3 id="sensores">3.1. Capa de Percepción (Sensores y Actuadores)</h3>
+        <h3 id="sensores">3.1. Capa de Percepción y Gateways</h3>
         <p>
-            Es la capa física donde se origina la información. Los sensores convierten variables físicas (temperatura, presión, movimiento) en señales digitales. Esta capa corresponde a la "Entrada" en el ciclo de procesamiento de datos.
+            Es la capa física donde se origina la información. Los sensores convierten variables físicas (temperatura, presión, geolocalización) en señales digitales. Dado que muchos de estos sensores son de baja potencia y no pueden conectarse directamente a Internet, a menudo se utilizan <strong>Gateways (Puertas de Enlace)</strong>. Estos dispositivos intermedios agregan los datos de múltiples sensores, traducen protocolos y los envían a la nube de manera segura.
         </p>
 
         <h3 id="transmision">3.2. Capa de Red y Transmisión</h3>
         <p>
-            Es responsable de transportar los datos desde los dispositivos hasta la plataforma en la nube. Debido a la naturaleza diversa de los dispositivos IoT, se utilizan múltiples medios de transmisión:
+            Es responsable de transportar los datos desde los dispositivos o gateways hasta la plataforma en la nube. Debido a la naturaleza diversa de los entornos de despliegue, se utilizan múltiples medios de transmisión:
         </p>
         <ul>
-            <li><strong>Redes Celulares (4G/5G/NB-IoT):</strong> Para dispositivos móviles o en exteriores.</li>
-            <li><strong>Redes LPWAN (LoRaWAN, Sigfox):</strong> Para sensores de bajo consumo y largo alcance.</li>
-            <li><strong>Wi-Fi / Ethernet:</strong> Para entornos controlados como hogares o industrias.</li>
+            <li><strong>Redes Celulares (4G/5G/NB-IoT):</strong> Ideales para movilidad y exteriores. El 5G promete reducir la latencia significativamente.</li>
+            <li><strong>Redes LPWAN (LoRaWAN, Sigfox):</strong> Diseñadas para sensores que envían pocos datos a largas distancias con batería que dura años.</li>
+            <li><strong>Wi-Fi / Ethernet:</strong> Utilizadas en entornos controlados de alto ancho de banda como hogares o fábricas inteligentes.</li>
         </ul>
 
         <h2 id="protocolos">4. Protocolos Específicos de Teleproceso IoT</h2>
         <p>
-            El teleproceso moderno enfrenta restricciones de ancho de banda y energía que no existían en las redes de computadoras tradicionales. Por ello, protocolos web estándar como HTTP a menudo son ineficientes para IoT.
+            El teleproceso moderno enfrenta restricciones de ancho de banda y energía que no existían en las redes de computadoras tradicionales. Por ello, protocolos web estándar como HTTP a menudo son ineficientes para IoT debido a su gran "overhead" (sobrecarga de datos).
         </p>
 
-        <h3 id="mqtt">4.1. MQTT (Message Queuing Telemetry Transport)</h3>
+        <h3 id="mqtt">4.1. MQTT y Calidad de Servicio (QoS)</h3>
         <p>
-            MQTT se ha convertido en el estándar de facto para la comunicación en teleprocesos IoT. Es un protocolo ligero basado en el modelo de <strong>publicación/suscripción</strong>. A diferencia del modelo cliente-servidor, donde el cliente debe solicitar datos, en MQTT los dispositivos "publican" datos a un intermediario (Broker), y este los distribuye a quien los necesite. Esto reduce drásticamente el consumo de datos y energía.
+            MQTT (Message Queuing Telemetry Transport) es el estándar de facto. Es un protocolo ligero basado en <strong>publicación/suscripción</strong>. Una característica crítica para el teleproceso es su gestión de QoS (Quality of Service), que define la garantía de entrega:
         </p>
+        <ul>
+            <li><strong>QoS 0 (At most once):</strong> "Disparar y olvidar". No garantiza la entrega.</li>
+            <li><strong>QoS 1 (At least once):</strong> Garantiza que el mensaje llegue, pero puede duplicarse.</li>
+            <li><strong>QoS 2 (Exactly once):</strong> Garantiza que el mensaje llegue exactamente una vez. Es el más lento pero el más seguro.</li>
+        </ul>
 
-        <h3 id="comparativa">4.2. Comparativa: HTTP vs. MQTT</h3>
+        <h3 id="comparativa">4.2. Comparativa Técnica: HTTP vs. MQTT</h3>
         <table>
             <thead>
                 <tr>
@@ -248,46 +255,68 @@
                 </tr>
                 <tr>
                     <td><strong>Overhead (Cabecera)</strong></td>
-                    <td>Alto (Cientos de bytes)</td>
+                    <td>Alto (Cientos de bytes por mensaje)</td>
                     <td>Muy Bajo (Mínimo 2 bytes)</td>
                 </tr>
                 <tr>
                     <td><strong>Consumo de Energía</strong></td>
-                    <td>Alto (Requiere mantener conexión)</td>
-                    <td>Bajo (Diseñado para baterías)</td>
+                    <td>Alto (Requiere mantener conexión activa)</td>
+                    <td>Bajo (Optimizado para baterías y redes inestables)</td>
                 </tr>
                 <tr>
-                    <td><strong>Fiabilidad</strong></td>
-                    <td>Depende de TCP</td>
-                    <td>Calidad de Servicio (QoS) configurable</td>
+                    <td><strong>Uso Ideal</strong></td>
+                    <td>Documentos, Imágenes, APIs REST</td>
+                    <td>Telemetría, Comandos de Control, Tiempo Real</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 id="edge">5. Edge Computing: Reduciendo la Latencia</h2>
+        <h2 id="edge">5. Edge y Fog Computing: Descentralización del Proceso</h2>
         <p>
-            Una limitación crítica del teleproceso centralizado en la nube es la latencia (el tiempo que tardan los datos en viajar). En aplicaciones críticas, como vehículos autónomos o control industrial, milisegundos de retraso pueden ser fatales.
+            Una limitación crítica del teleproceso centralizado en la nube es la latencia. En aplicaciones críticas, esperar a que los datos viajen al servidor central y vuelvan puede ser peligroso.
         </p>
         <p>
-            Para solucionar esto, ha surgido el <strong>Edge Computing</strong> (Computación en el Borde). Este paradigma desplaza parte del procesamiento desde la nube central hacia nodos ubicados cerca de la fuente de datos (el "borde" de la red). De esta forma, el teleproceso se vuelve híbrido: las decisiones críticas se procesan localmente en tiempo real, mientras que solo los datos agregados o no urgentes se envían a la nube para análisis histórico.
-        </p>
-
-        <h2 id="desafios">6. Desafíos de Seguridad y Escalabilidad</h2>
-        <p>
-            La expansión del teleproceso a miles de millones de dispositivos introduce riesgos significativos:
+            Para mitigar esto, surgen dos conceptos que complementan a la nube:
         </p>
         <ul>
-            <li><strong>Superficie de Ataque:</strong> Cada dispositivo IoT es un punto potencial de entrada para ciberataques si no está debidamente asegurado.</li>
-            <li><strong>Privacidad de Datos:</strong> La recolección masiva de datos personales o sensibles requiere encriptación robusta en tránsito y en reposo.</li>
-            <li><strong>Gestión de Identidad:</strong> Autenticar y autorizar millones de dispositivos de forma segura requiere infraestructuras de clave pública (PKI) escalables.</li>
+            <li><strong>Edge Computing (Computación en el Borde):</strong> El procesamiento ocurre en el propio dispositivo o sensor. Ejemplo: Una cámara de seguridad que detecta movimiento por sí misma antes de enviar la alerta.</li>
+            <li><strong>Fog Computing (Computación en la Niebla):</strong> El procesamiento ocurre en un nodo de la red local (como un router o gateway potente) antes de salir a Internet. Actúa como un intermediario que filtra datos irrelevantes, reduciendo el tráfico hacia la nube.</li>
         </ul>
 
-        <h2 id="conclusion">7. Conclusión</h2>
+        <h2 id="casos">6. Casos de Uso Reales en la Industria</h2>
         <p>
-            Las aplicaciones modernas de teleprocesos, impulsadas por la convergencia de IoT y Cloud Computing, han transformado la infraestructura tecnológica global. Hemos pasado de sistemas rígidos y centralizados a ecosistemas distribuidos, elásticos y orientados a datos. La adopción de protocolos eficientes como MQTT y arquitecturas híbridas como Edge Computing demuestra la madurez de este campo, permitiendo soluciones que van desde ciudades inteligentes hasta la industria 4.0.
+            La aplicación de estas arquitecturas ha transformado sectores enteros:
+        </p>
+        <ul>
+            <li><strong>Smart Cities (Ciudades Inteligentes):</strong> Gestión de tráfico en tiempo real mediante sensores en las calzadas y semáforos conectados a la nube para optimizar el flujo vehicular y reducir emisiones.</li>
+            <li><strong>Industria 4.0:</strong> Mantenimiento predictivo. Sensores de vibración en maquinaria industrial envían datos constantes; algoritmos en la nube detectan anomalías y predicen fallos antes de que ocurran.</li>
+            <li><strong>E-Health (Telemedicina):</strong> Monitoreo remoto de pacientes. Dispositivos wearables transmiten constantes vitales a hospitales, permitiendo la intervención rápida sin hospitalización permanente.</li>
+        </ul>
+
+        <h2 id="desafios">7. Desafíos de Seguridad y Escalabilidad</h2>
+        <p>
+            La expansión del teleproceso a miles de millones de dispositivos introduce nuevos vectores de riesgo:
+        </p>
+        <ul>
+            <li><strong>Superficie de Ataque Ampliada:</strong> Cada dispositivo IoT es un punto potencial de entrada para ciberataques (como redes Botnet) si no se actualiza o asegura correctamente.</li>
+            <li><strong>Privacidad de Datos:</strong> La recolección masiva de datos personales requiere encriptación robusta (TLS/SSL) tanto en tránsito como en reposo.</li>
+            <li><strong>Interoperabilidad:</strong> La falta de estandarización entre fabricantes dificulta la integración de dispositivos de diferentes marcas en una misma plataforma de teleproceso.</li>
+        </ul>
+
+        <h2 id="conclusion">8. Conclusión</h2>
+        <p>
+            Las aplicaciones modernas de teleprocesos han evolucionado desde sistemas rígidos y centralizados hacia ecosistemas distribuidos, elásticos y orientados a datos. La convergencia de IoT y Cloud Computing, apoyada por protocolos eficientes como MQTT y arquitecturas híbridas como Edge Computing, permite soluciones que antes eran inviables tecnológicamente. Esta transformación no solo optimiza procesos existentes, sino que habilita una toma de decisiones más inteligente y automatizada en tiempo real, constituyendo la base de la sociedad digital contemporánea.
         </p>
 
-        
+        <h2 id="fuentes">9. Fuentes y Bibliografía</h2>
+        <div class="fuentes">
+            <ul>
+                <li>Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). <em>Internet of Things (IoT): A vision, architectural elements, and future directions</em>. Future Generation Computer Systems.</li>
+                <li>IBM Cloud Education. (2020). <em>What is MQTT?</em> IBM.</li>
+                <li>Tanenbaum, A. S., & Wetherall, D. J. (2011). <em>Computer Networks</em> (5th ed.). Prentice Hall.</li>
+                <li>Cisco. (2015). <em>Fog Computing and the Internet of Things: Extend the Cloud to Where the Things Are</em>. White Paper.</li>
+            </ul>
+        </div>
         
         <div class="footer">
             <p><a href="#top">Volver al inicio</a></p>
